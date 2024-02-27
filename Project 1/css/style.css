@@ -9,14 +9,16 @@ Dark green: #28b485
 ***************** RESET ****************
 ****************************************/
 
-* {
+*,
+*::after,
+*::before {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box; /* exclude border/padding from width/hight */
+	box-sizing: inherit; /* force box-sizing to inherit on all elements */
 }
 
 html {
-	font-size: 10px;
+	font-size: 62.5%;		/* best practice to set this to 62.5% (10px) for rem purposes */
 }
 
 body {
@@ -26,6 +28,8 @@ body {
  */	line-height: 1.7;
 	color: #777;
 	padding: 3rem;
+
+	box-sizing: border-box; /* exclude border/padding from width/hight */
 }
 
 /***************************************
