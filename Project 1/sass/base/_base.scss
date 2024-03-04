@@ -1,2 +1,18 @@
 /* This is a partial Sass file, hence the _base.scss underscore */
 
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit; /* force box-sizing to inherit on all elements */
+}
+
+html {
+	/* best practice to set this to 62.5% (10px) for rem purposes */
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box; /* exclude border/padding from width/hight */
+}

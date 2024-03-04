@@ -1,7 +1,4 @@
 /* This is a partial Sass file, hence the _base.scss underscore */
-/***************************************
-***************** RESET ****************
-****************************************/
 *,
 *::after,
 *::before {
@@ -10,75 +7,13 @@
   box-sizing: inherit; /* force box-sizing to inherit on all elements */
 }
 
-/***************************************
-***************** MAIN *****************
-****************************************/
 html {
-  font-size: 62.5%; /* best practice to set this to 62.5% (10px) for rem purposes */
+  /* best practice to set this to 62.5% (10px) for rem purposes */
+  font-size: 62.5%;
 }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* 	font-size: 1rem;
-   */
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
   box-sizing: border-box; /* exclude border/padding from width/hight */
-}
-
-/***************************************
-***************** HEADER ***************
-****************************************/
-.header {
-  position: relative;
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75%, 0 100%);
-          clip-path: polygon(0 0, 100% 0%, 100% 75%, 0 100%); /* add slice across bottom of header */
-}
-.header__logo-box {
-  position: absolute; /* based on parent with 'position: relative' */
-  top: 4rem;
-  left: 4rem;
-}
-.header__logo {
-  height: 3.5rem;
-}
-.header__text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* shift text on the x/y to center it based on top/left above */
-  text-align: center;
-}
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden; /* prevent animation shake */
-  margin-bottom: 6rem;
-}
-.heading-primary--main {
-  display: block; /* use to give heach span element its own line */
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out; /* animation starts fast, ends slow with ease-out */
-  /* 	animation-delay: 3s;
-  	animation-iteration-count: 3; */
-}
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700px;
-  letter-spacing: 1.7rem;
-  animation: moveInRight 1s ease-out; /* shorthand for name, duration, timing-function */
 }
 
 @keyframes moveInLeft {
@@ -107,6 +42,51 @@ body {
     transform: translateX(0);
   }
 }
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* 	font-size: 1rem;
+   */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden; /* prevent animation shake */
+  margin-bottom: 6rem;
+}
+.heading-primary--main {
+  display: block; /* use to give heach span element its own line */
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; /* animation starts fast, ends slow with ease-out */
+  /* 	animation-delay: 3s;
+  	animation-iteration-count: 3; */
+}
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700px;
+  letter-spacing: 1.7rem;
+  animation: moveInRight 1s ease-out; /* shorthand for name, duration, timing-function */
+}
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -153,13 +133,27 @@ body {
   animation-fill-mode: backwards;
 }
 
-@keyframes moveInButton {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75%, 0 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 75%, 0 100%); /* add slice across bottom of header */
+}
+.header__logo-box {
+  position: absolute; /* based on parent with 'position: relative' */
+  top: 4rem;
+  left: 4rem;
+}
+.header__logo {
+  height: 3.5rem;
+}
+.header__text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* shift text on the x/y to center it based on top/left above */
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
