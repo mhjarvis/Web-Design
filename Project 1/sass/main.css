@@ -9,6 +9,9 @@
   box-sizing: inherit; /* force box-sizing to inherit on all elements */
 }
 
+/***************************************
+***************** MAIN *****************
+****************************************/
 html {
   font-size: 62.5%; /* best practice to set this to 62.5% (10px) for rem purposes */
 }
@@ -36,17 +39,14 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75%, 0 100%);
           clip-path: polygon(0 0, 100% 0%, 100% 75%, 0 100%); /* add slice across bottom of header */
 }
-
 .header__logo-box {
   position: absolute; /* based on parent with 'position: relative' */
   top: 4rem;
   left: 4rem;
 }
-
 .header__logo {
   height: 3.5rem;
 }
-
 .header__text-box {
   position: absolute;
   top: 50%;
@@ -61,7 +61,6 @@ body {
   backface-visibility: hidden; /* prevent animation shake */
   margin-bottom: 6rem;
 }
-
 .heading-primary--main {
   display: block; /* use to give heach span element its own line */
   font-size: 6rem;
@@ -73,7 +72,6 @@ body {
   /* 	animation-delay: 3s;
   	animation-iteration-count: 3; */
 }
-
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
@@ -108,8 +106,7 @@ body {
     transform: translateX(0);
   }
 }
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -119,22 +116,25 @@ body {
   position: relative;
   font-size: 1.6rem;
 }
-
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
 }
-
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.4);
+  opacity: 0; /* fade out element */
+}
 .btn:active { /* this will change css when the button is clicked */
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
-
 .btn--white {
   background-color: #fff;
   color: #777;
 }
-
+.btn--white::after {
+  background-color: #fff;
+}
 .btn::after {
   content: "";
   display: inline-block;
@@ -147,14 +147,9 @@ body {
   z-index: -1;
   transition: all 0.4s;
 }
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.4);
-  opacity: 0; /* fade out element */
+.btn--animated {
+  animation: moveInButton 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
 }
 
 @keyframes moveInButton {
@@ -166,8 +161,4 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
-}
-.btn--animated {
-  animation: moveInButton 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
 }/*# sourceMappingURL=main.css.map */
