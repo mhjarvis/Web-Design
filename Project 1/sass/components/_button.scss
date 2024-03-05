@@ -19,6 +19,7 @@
             opacity: 0; /* fade out element */
         }
     }
+	
     &:active {
         /* this will change css when the button is clicked */
         transform: translateY(-1px);
