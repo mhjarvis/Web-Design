@@ -154,7 +154,8 @@ body {
   transform: scaleX(1.4) scaleY(1.4);
   opacity: 0; /* fade out element */
 }
-.btn:active { /* this will change css when the button is clicked */
+.btn:active {
+  /* this will change css when the button is clicked */
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
@@ -189,7 +190,19 @@ body {
   text-decoration: none;
   border-bottom: 1px solid #55c57a;
   padding: 3px;
+  transition: all 0.2s;
 }
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+}
+
 .header {
   position: relative;
   height: 95vh;
