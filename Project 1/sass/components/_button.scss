@@ -19,7 +19,6 @@
             opacity: 0; /* fade out element */
         }
     }
-	
     &:active {
         /* this will change css when the button is clicked */
         transform: translateY(-1px);
@@ -71,7 +70,7 @@
     }
 
     &:active {
-        box-shadow: 0 .5rem 1rem rgba($color-black, 0.15);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
         transform: translateY(0);
     }
 }
