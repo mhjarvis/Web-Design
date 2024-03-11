@@ -263,7 +263,7 @@ body {
   height: 50rem;
 }
 .card__side {
-  color: black;
+  color: #fff;
   font-size: 2rem;
   height: 50rem;
   transition: all 0.8s ease;
@@ -275,6 +275,9 @@ body {
   border-radius: 3px;
   overflow: hidden;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.card__side--front {
+  background-color: #fff;
 }
 .card__side--back {
   transform: rotateY(180deg);
@@ -303,6 +306,16 @@ body {
 }
 .card__picture--3 {
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg);
+}
+.card__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: #fff;
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
 }
 
 .header {
