@@ -3,12 +3,10 @@
     perspective: 150rem;
     -moz-perspective: 150rem; // for this to work in firefox
     position: relative;
-    height: 50rem;
+    height: 52rem;
 
     &__side {
-        color: $color-white;
-        font-size: 2rem;
-        height: 50rem;
+        height: 52rem;
         transition: all 0.8s ease;
         position: absolute;
         top: 0;
@@ -16,7 +14,7 @@
         width: 100%;
         backface-visibility: hidden;
         border-radius: 3px;
-        overflow: hidden;   
+        overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
         &--front {
@@ -49,8 +47,8 @@
         height: 23rem;
         background-blend-mode: screen;
 
-        // Determine the coordinates: x y, x y, x y, x y; 
-        clip-path: polygon(0 0, 100% 0, 100% 85%,0 100%);
+        // Determine the coordinates: x y, x y, x y, x y;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
         &--1 {
@@ -89,5 +87,38 @@
         position: absolute;
         top: 12rem;
         right: 2rem;
+        width: 75%;
+    }
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-secondary-light, 0.85),
+                rgba($color-secondary-dark, 0.85)
+            );
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+            }
+        }
     }
 }
